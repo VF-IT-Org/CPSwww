@@ -15,9 +15,35 @@ div.container {
   text-align: center;
 }
 
+.content-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 72px 20px 32px;
+  text-align: center;
+}
+
+.content-wrap h2,
+.content-wrap h3,
+.content-wrap h4,
+.content-wrap p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 ul.myUL {
   display: inline-block;
   text-align: left;
+  line-height: 1.6;
+}
+
+.about-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-photo {
+  max-width: 100%;
+  height: auto;
 }
 
 .topnav {
