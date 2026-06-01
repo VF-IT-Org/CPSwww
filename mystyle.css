@@ -22,6 +22,21 @@ div.container {
   text-align: center;
 }
 
+.page-header {
+  padding-top: 8px;
+  margin-bottom: 24px;
+}
+
+.page-header h1,
+.page-header h2 {
+  margin: 0;
+}
+
+.page-header h2 {
+  margin-top: 12px;
+}
+
+.content-wrap h1,
 .content-wrap h2,
 .content-wrap h3,
 .content-wrap h4,
