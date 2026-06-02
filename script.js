@@ -1,7 +1,20 @@
 // JavaScript Document
 
 const themeToggle = document.getElementById("themeToggle");
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("siteMenu");
 const body = document.body;
+
+function setMenuState(isOpen) {
+  if (!menuToggle || !navMenu) {
+    return;
+  }
+
+  menuToggle.classList.toggle("is-open", isOpen);
+  navMenu.classList.toggle("is-open", isOpen);
+  menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+}
 
 function updateThemeLabel() {
   if (!themeToggle) {
@@ -22,6 +35,31 @@ if (themeToggle) {
     }
 
     updateThemeLabel();
+  });
+}
+
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") !== "true";
+    setMenuState(isOpen);
+  });
+
+  navMenu.querySelectorAll("a, button").forEach((element) => {
+    if (element === menuToggle || element === themeToggle) {
+      return;
+    }
+
+    element.addEventListener("click", () => {
+      if (window.innerWidth <= 840) {
+        setMenuState(false);
+      }
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 840) {
+      setMenuState(false);
+    }
   });
 }
 
