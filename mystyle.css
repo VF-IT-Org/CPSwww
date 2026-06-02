@@ -551,6 +551,7 @@ ul {
 
 .gallery-slide figcaption {
   margin-top: 14px;
+  padding: 0 22px 18px;
   color: var(--text-muted);
 }
 
