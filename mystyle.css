@@ -465,6 +465,12 @@ ul {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.logo-grid > .logo-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  width: min(100%, 420px);
+  justify-self: center;
+}
+
 .trust-item,
 .card,
 .stat-card,
