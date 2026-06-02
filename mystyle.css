@@ -482,6 +482,28 @@ ul {
   text-align: center;
 }
 
+.partner-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.partner-title-link {
+  color: var(--heading);
+  text-decoration: none;
+}
+
+.partner-title-link:hover {
+  color: var(--primary);
+}
+
+.partner-cta {
+  margin-top: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .card h3,
 .contact-card h2,
 .logo-card h3 {
